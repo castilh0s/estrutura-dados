@@ -8,52 +8,52 @@ public class MergeSort {
 		this.inputArray = inputArray;
 	}
 
-	public ArrayList<Integer> getSortedArray() {
+	public ArrayList<Integer> getArray() {
 		return inputArray;
 	}
 
-	public void sortGivenArray() {
-		divide(0, this.inputArray.size() - 1);
+	public void ordenarArray() {
+		dividir(0, this.inputArray.size() - 1);
 	}
 
-	public void divide(Integer startIndex, Integer endIndex) {
-		if (startIndex < endIndex && (endIndex - startIndex) >= 1) {
-			Integer mid = (endIndex + startIndex) / 2;
-			divide(startIndex, mid);
-			divide(mid + 1, endIndex);
+	public void dividir(Integer indiceInicial, Integer indiceFinal) {
+		if (indiceInicial < indiceFinal && (indiceFinal - indiceInicial) >= 1) {
+			Integer meio = (indiceFinal + indiceInicial) / 2;
+			dividir(indiceInicial, meio);
+			dividir(meio + 1, indiceFinal);
 
-			merger(startIndex, mid, endIndex);
+			conquistar(indiceInicial, meio, indiceFinal);
 		}
 	}
 
-	public void merger(Integer startIndex, Integer midIndex, Integer endIndex) {
+	public void conquistar(Integer indiceInicial, Integer indiceMeio, Integer indiceFinal) {
 		ArrayList<Integer> mergedSortedArray = new ArrayList<Integer>();
 
-		Integer leftIndex = startIndex;
-		Integer rightIndex = midIndex + 1;
+		Integer indiceEsquerdo = indiceInicial;
+		Integer indiceDireito = indiceMeio + 1;
 
-		while (leftIndex <= midIndex && rightIndex <= endIndex) {
-			if (inputArray.get(leftIndex) <= inputArray.get(rightIndex)) {
-				mergedSortedArray.add(inputArray.get(leftIndex));
-				leftIndex++;
+		while (indiceEsquerdo <= indiceMeio && indiceDireito <= indiceFinal) {
+			if (inputArray.get(indiceEsquerdo) <= inputArray.get(indiceDireito)) {
+				mergedSortedArray.add(inputArray.get(indiceEsquerdo));
+				indiceEsquerdo++;
 			} else {
-				mergedSortedArray.add(inputArray.get(rightIndex));
-				rightIndex++;
+				mergedSortedArray.add(inputArray.get(indiceDireito));
+				indiceDireito++;
 			}
 		}
 
-		while (leftIndex <= midIndex) {
-			mergedSortedArray.add(inputArray.get(leftIndex));
-			leftIndex++;
+		while (indiceEsquerdo <= indiceMeio) {
+			mergedSortedArray.add(inputArray.get(indiceEsquerdo));
+			indiceEsquerdo++;
 		}
 
-		while (rightIndex <= endIndex) {
-			mergedSortedArray.add(inputArray.get(rightIndex));
-			rightIndex++;
+		while (indiceDireito <= indiceFinal) {
+			mergedSortedArray.add(inputArray.get(indiceDireito));
+			indiceDireito++;
 		}
 
 		Integer i = 0;
-		Integer j = startIndex;
+		Integer j = indiceInicial;
 		while (i < mergedSortedArray.size()) {
 			inputArray.set(j, mergedSortedArray.get(i++));
 			j++;
@@ -63,28 +63,28 @@ public class MergeSort {
 	public static void main(String[] args) throws Exception {
     validate(args);
 
-		Integer SIZE = Integer.valueOf(args[0]);
+		Integer TAMANHO = Integer.valueOf(args[0]);
 		Integer MAX = Integer.valueOf(args[1]);
 
-		ArrayList<Integer> unsortedArray = new ArrayList<Integer>();
+		ArrayList<Integer> inputArray = new ArrayList<Integer>();
 
 		Random generator = new Random();
-		for (int i = 0; i < SIZE; i++) {
-			unsortedArray.add(generator.nextInt(MAX));
+		for (int i = 0; i < TAMANHO; i++) {
+			inputArray.add(generator.nextInt(MAX));
 		}
 
-		MergeSort ms = new MergeSort(unsortedArray);
+		MergeSort ms = new MergeSort(inputArray);
 
 		System.out.println("Array Inicial");
-		for (int i : ms.getSortedArray()) {
+		for (int i : ms.getArray()) {
 			System.out.print(i + " ");
 		}
 		System.out.println();
 
-		ms.sortGivenArray();
+		ms.ordenarArray();
 
 		System.out.println("\nArray Final");
-		for (int i : ms.getSortedArray()) {
+		for (int i : ms.getArray()) {
 			System.out.print(i + " ");
 		}
   }
