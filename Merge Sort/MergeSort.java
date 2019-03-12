@@ -75,7 +75,7 @@ public class MergeSort {
 
 		MergeSort ms = new MergeSort(unsortedArray);
 
-		System.out.println("---------Array Inicial---------");
+		System.out.println("Array Inicial");
 		for (int i : ms.getSortedArray()) {
 			System.out.print(i + " ");
 		}
@@ -83,7 +83,7 @@ public class MergeSort {
 
 		ms.sortGivenArray();
 
-		System.out.println("\n------------Array Organizado------------");
+		System.out.println("\nArray Final");
 		for (int i : ms.getSortedArray()) {
 			System.out.print(i + " ");
 		}
