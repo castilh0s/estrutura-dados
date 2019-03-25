@@ -12,6 +12,7 @@ O Merge Sort é um algoritmo de divisão e conquista. Ele consiste, basicamente,
 ![Detailed Merge Sort](https://cdn.kastatic.org/ka-perseus-images/ace963383bea8d154f6abd1322a06a73b56b4628.png)
 
 > Exemplo detalhado. [Fonte. Acesso em 12/03/2019](https://cdn.kastatic.org/ka-perseus-images/ace963383bea8d154f6abd1322a06a73b56b4628.png)
+
 ## Algoritmo
 
 O algoritmo possui um construtor que define um `ArrayList<Integer>` que é uma lista com N números inteiros.

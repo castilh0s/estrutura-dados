@@ -5,3 +5,4 @@ Reposítório referente a matéria de Estrutura de Dados ministrada pelo profess
 ## Conteúdos
 
 * [Merge Sort](https://github.com/castilh0s/estrutura-dados/tree/master/Merge%20Sort)
+* [Ordenação](https://github.com/castilh0s/estrutura-dados/tree/master/Ordena%C3%A7%C3%A3o)
