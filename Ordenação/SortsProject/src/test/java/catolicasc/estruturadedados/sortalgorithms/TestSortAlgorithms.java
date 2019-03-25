@@ -5,27 +5,20 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import junit.framework.TestCase;
-
+import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
-import catolicasc.estruturadedados.sortalgorithms.BubbleSortStrategy;
-import catolicasc.estruturadedados.sortalgorithms.IStrategy;
-import catolicasc.estruturadedados.sortalgorithms.InsertionSortStrategy;
-import catolicasc.estruturadedados.sortalgorithms.SelectionSortStrategy;
-import catolicasc.estruturadedados.sortalgorithms.StrategyCommand;
-
-import org.junit.runner.RunWith;
+import junit.framework.TestCase;
 
 /**
  * Unit test for sort methods using Strategy as technique for separation of
  * concerns.
- * 
+ *
  * O programa de testes usa o modelo de testes parametrizáveis do JUnit para que
  * a lógica de teste seja mais simples.
- * 
+ *
  * @author Glauco Vinicius Scheffel
  */
 
@@ -40,15 +33,15 @@ public final class TestSortAlgorithms extends TestCase {
 	@Parameter(1)
 	public int tamanho;
 
-
 	/**
 	 * Cria a lista de algoritmos e o conjunto de valores que devem ser testados
+	 *
 	 * @return
 	 */
 	@Parameters(name = "{index}: algoritmo {0}({1})")
 	public static Collection<Object[]> data() {
 		Collection<Object[]> tests = new ArrayList<Object[]>();
-		IStrategy strategies[] = new IStrategy[9];
+		IStrategy strategies[] = new IStrategy[10];
 		strategies[0] = new BubbleSortStrategy();
 		strategies[1] = new SelectionSortStrategy();
 		strategies[2] = new ShellSortStrategy();
@@ -56,19 +49,19 @@ public final class TestSortAlgorithms extends TestCase {
 		strategies[4] = new HeapSortStrategy();
 		strategies[5] = new MergeSortStrategy();
 		strategies[6] = new QuickSortStrategy();
-		strategies[7] = new JavaParallelSortStrategy();
-		strategies[8] = new JavaSortStrategy();
-		
+		strategies[7] = new NewQuickSortStrategy();
+		strategies[8] = new JavaParallelSortStrategy();
+		strategies[9] = new JavaSortStrategy();
+
 		List<Integer> list = new ArrayList<>();
 		for (int i = 0; i <= SIZE; i++)
 			list.add(i);
 		Collections.shuffle(list);
-		
+
 		for (int i = 0; i < data.length; i++) {
 			data[i] = list.get(i).intValue();
 		}
-		
-		
+
 		int value = 80000;
 		while (value <= SIZE) {
 			for (int i = 0; i < strategies.length; i++) {
@@ -82,7 +75,7 @@ public final class TestSortAlgorithms extends TestCase {
 
 	/**
 	 * Verifica se o conjunto esta ordenado pela estratégia passada
-	 * 
+	 *
 	 * @param strategy
 	 * @return
 	 */
@@ -100,7 +93,7 @@ public final class TestSortAlgorithms extends TestCase {
 	/**
 	 * Organiza os elementos de acordo com o tamanho especificado e o algoritmo
 	 * escolhido
-	 * 
+	 *
 	 * @param strategy
 	 * @param elements
 	 * @return
