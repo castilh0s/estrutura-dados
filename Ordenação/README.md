@@ -28,7 +28,7 @@ Baixar localmente o projeto encontrado [neste repositório](https://github.com/g
 5. Explique o algoritmo de ordenação paralela do Java.
 6. Refaça os algoritmos em outra linguagem da sua escolha. Compare os resultados de performance com o Java.
 
-### Resultados
+## Resultados
 
 1. O algoritmo mais rápido foi o Java Sort, que teve uma média de 0,002s.
 2. O algoritmo mais lento foi o Shell Sort, que teve uma média de 112,710s.
