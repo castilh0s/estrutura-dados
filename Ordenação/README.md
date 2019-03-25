@@ -33,6 +33,10 @@ Baixar localmente o projeto encontrado [neste repositório](https://github.com/g
 1. O algoritmo mais rápido foi o Java Sort, que teve uma média de 0,002s.
 2. O algoritmo mais lento foi o Shell Sort, que teve uma média de 112,710s.
 3. Lento, foi o segundo algoritmo de ordenação mais lento, ficando na frente apenas do Shell Sort.
+4. [Novo QuickSort](https://github.com/castilh0s/estrutura-dados/blob/master/Ordena%C3%A7%C3%A3o/SortsProject/src/main/java/catolicasc/estruturadedados/sortalgorithms/NewQuickSortStrategy.java).
+    1. blablabla.
+5. blablabla.
+6. [Códigos em Python](https://github.com/castilh0s/estrutura-dados/tree/master/Ordena%C3%A7%C3%A3o/M%C3%A9todos%20de%20Ordena%C3%A7%C3%A3o).
 
 ## Estudantes
 
