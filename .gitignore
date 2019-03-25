@@ -1,6 +1,8 @@
 # Classes Java
 *.class
 
+*.idea/
+
 # Eclipse
 .metadata
 bin/
