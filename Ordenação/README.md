@@ -15,7 +15,7 @@ Baixar localmente o projeto encontrado [neste repositório](https://github.com/g
 2. Qual o mais lento?
 3. Como ficou o desempenho do QuickSort?
 4. Crie uma versão melhorada do QuickSort.
-    a. O que você fez para melhorar o algoritmo? Explique a técnica.
+	1. O que você fez para melhorar o algoritmo? Explique a técnica.
 5. Explique o algoritmo de ordenação paralela do Java.
 6. Refaça os algoritmos em outra linguagem da sua escolha. Compare os resultados de performance com o Java.
 
