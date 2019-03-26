@@ -14,9 +14,8 @@ public class JavaParallelSortStrategy extends AbstractSortStrategy {
 	public void sort() {
         int[] elementos = this.getElements();
         Arrays.parallelSort(elementos);
-
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Java Parallel Algorithm";

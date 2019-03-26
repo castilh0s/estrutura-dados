@@ -35,7 +35,7 @@ Baixar localmente o projeto encontrado [neste repositório](https://github.com/g
 3. O Quick Sort foi o segundo algoritmo de ordenação mais lento, ficando na frente apenas do Shell Sort.
 4. [Novo Quick Sort](https://github.com/castilh0s/estrutura-dados/blob/master/Ordena%C3%A7%C3%A3o/SortsProject/src/main/java/catolicasc/estruturadedados/sortalgorithms/NewQuickSortStrategy.java).
     1. O método *sort* está chamando um método chamado *quickSort*, que em fez de criar um ArrayDeque e no lugar de fazer um while ele realiza dois ifs e chama novamente o método *quickSort* e no método *partition* em vez de fazer ifs dentro do while principal ele cria outros dois whiles e um último if para chamar o método *swap* efetuando a troca.
-5. blablabla.
+5. A ordenação paralela em Java faz o uso do Merge Sort, porém utiliza múltiplas threads para dividir os sub arrays.
 6. [Códigos em Python](https://github.com/castilh0s/estrutura-dados/tree/master/Ordena%C3%A7%C3%A3o/M%C3%A9todos%20de%20Ordena%C3%A7%C3%A3o).
 
 ## Estudantes
