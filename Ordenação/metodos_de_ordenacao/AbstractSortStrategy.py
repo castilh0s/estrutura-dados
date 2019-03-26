@@ -7,7 +7,7 @@ class AbstractSortStrategy(IStrategy):
         self.set_elements(elements)
 
     def sort(self):
-        pass
+        raise NotImplementedError("É preciso implementar o método sort.")
 
     def get_elements(self):
         return self.__elements
